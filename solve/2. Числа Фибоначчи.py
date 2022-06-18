@@ -10,4 +10,4 @@ while fib[-1] < 4000000:                     # Пока последнее эл�
 result = filter(lambda x: x % 2 == 0, fib)   # ищем все четные числа в списке
 
 if __name__ == '__main__':
-    print(sum(result))
+    assert sum(result) == 4613732
