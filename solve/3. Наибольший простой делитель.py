@@ -23,4 +23,5 @@ for i in range(70, a + 1):
         break
 
 if __name__ == '__main__':
-    print('max div =',max(div))
+    assert div == [71, 839, 1471, 6857]
+    assert max(div) == 6857
