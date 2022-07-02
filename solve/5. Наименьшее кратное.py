@@ -6,14 +6,15 @@
 2) как только это число найдется, вывести его на экран'''
 
 
-x = 1
-status = True
-while status:
-    z = []
-    z = [i for i in range(1,21) if x % i ==0 ]
-    if len(z) == 20:
-        print(x)
-        status = False
-    x += 1
-
+import time
+def smallest_mult(num_period):
+    start_time, result, multipliers = time.time(), 6, [1, 2, 3]
+    for number in range(4, num_period+1):
+        for multip in multipliers:
+            if number % multip == 0:
+                number = number / multip
+        multipliers.append(number)
+        result *= number
+    print(result, "--- %s seconds ---" % (time.time() - start_time), sep="\n")
+smallest_mult(num_period=20)
 
